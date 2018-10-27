@@ -12,9 +12,15 @@ library(data.table)
 my_lc_time <- Sys.getlocale("LC_TIME")
 Sys.setlocale("LC_TIME", "English")
 
-big_df <- fread("household_power_consumption.txt",nrows = 100000,
-                na.strings = "?", sep = ";", dec = ".")
+#load and read data
+fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+temp4 <- tempfile()
+download.file(fileUrl, temp4)
+big_df <- read.table(unz(temp4, "household_power_consumption.txt"),header = TRUE, 
+                     nrows = 100000, na.strings = "?", sep = ";", dec = ".")
+unlink(temp4)
 
+#modify data
 modified_df <- mutate(big_df, date_new = as.Date(Date,"%d/%m/%Y"),
                       time_new = as.POSIXct(strptime(Time, "%H:%M:%S")))
 
@@ -24,6 +30,7 @@ small_df <- dplyr::filter(modified_df, date_new >= as.Date("01/02/2007", "%d/%m/
 small_df2 <- mutate(small_df,
                     datetime = as.POSIXct.Date(date_new) + (hour(time_new) - 1)*60*60 + minute(time_new)*60)
 
+#plot data
 windows()
 par(mfrow = c(2,2))
 with(small_df2, 

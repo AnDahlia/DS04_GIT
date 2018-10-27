@@ -37,16 +37,9 @@ web site</a>:
 ## Making Plots
 
 goal: examine how household energy usage varies over a 2-day period in February, 2007.
-Therefore I have reconstructed four plots which one find in the README.md in the master branch
-of the repository below
-[https://github.com/rdpeng/ExData_Plotting1](https://github.com/rdpeng/ExData_Plotting1)
+Therefore I have reconstructed four plots which one find in README.md below in the master branch
 
-## Attached Files
-plot1.R, plot1.png,
-plot2.R, plot2.png,
-plot3.R, plot3.png,
-plot4.R, plot4.png
-household_power_consumption.txt
+[https://github.com/rdpeng/ExData_Plotting1](https://github.com/rdpeng/ExData_Plotting1)
 
 
 
