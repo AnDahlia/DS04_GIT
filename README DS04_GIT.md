@@ -35,13 +35,14 @@ web site</a>:
 
 ## Making Plots
 
-goal: reconstruction of four plots
+Goal: reconstruction of four plots
 which examine how household energy usage varies over a 2-day period in February, 2007.
 
-Therefory you will find 8 files here: 4 png-files which contain the plots and the corresponding R-Scripts .
+Therefory you will find 8 files here: 
+4 png-files which contain the plots and the corresponding R-Scripts:
 plot1.r, plot1.png, plot2.r, plot2.png, plot3.r, plot3.png, plot4.r, plot4.png
 
-The original plots  one find in README.md in the repository
+The original plots one find in the README.md in the repository
 [https://github.com/rdpeng/ExData_Plotting1](https://github.com/rdpeng/ExData_Plotting1)
 
 
